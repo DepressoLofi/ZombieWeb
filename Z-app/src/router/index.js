@@ -5,7 +5,7 @@ import Home from "../views/Home.vue";
 import Admin from "@/layout/master.vue";
 import AdminIndex from "@/views/admin/Index.vue";
 import Product from '@/views/admin/Product.vue';
-import ProductCreate from '@/views/admin/ProductCreate.vue';
+import User from '@/views/admin/User.vue';
 
 
 const routes = [
@@ -29,10 +29,11 @@ const routes = [
         name: 'Admin',
         path: '/admin',
         component: Admin,
+        redirect: '/admin/dashboard',
         children: [
             {
                 name: 'dashboard',
-                path: '',
+                path: 'dashboard',
                 component: AdminIndex,
             },
             {
@@ -42,9 +43,9 @@ const routes = [
 
             },
             {
-                name: 'product.create',
-                path: 'product/create',
-                component: ProductCreate,
+                name: 'user',
+                path: 'user',
+                component: User,
             }
         ]
     },
@@ -56,7 +57,7 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
 })
 
 export default router;
