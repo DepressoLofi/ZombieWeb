@@ -27,17 +27,18 @@
                 <button type="submit">Add Item</button>
             </form>
         </div>
+            <div>
+            <ul>
+                <li v-for="product in products" >{{ product.name }}  <button>delete</button></li>
+            </ul>
+        </div>
+        <h1 class="text-3xl font-bold underline">
+        Hello world!
+      </h1>
     </section>
 
 
-    <!-- <div>
-        <ul>
-            <li v-for="product in products" >{{ product.name }}  <button>delete</button></li>
-        </ul>
-    </div>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1> -->
+
 
 </template>
 
