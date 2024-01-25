@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('profile_picture')->nullable();
-            $table->string('is_admin')->default('user');
+            $table->string('role')->default('user');
             $table->timestamps();
         });
     }

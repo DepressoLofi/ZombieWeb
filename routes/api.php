@@ -25,7 +25,6 @@ Route::group(['middleware' => 'jwt'], function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
-
     // Route::group(['middleware' => 'role:1'], function(){
 
     // });

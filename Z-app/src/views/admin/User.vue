@@ -74,6 +74,7 @@ import { ref, onMounted } from 'vue';
 import { useUserStore } from '@/stores/index';
 
 const userStore = useUserStore();
+
 const users = ref([]);
 
 
@@ -103,9 +104,10 @@ const addSuffix = (day) => {
     }
 }
 
-const remove = (user) => {
-    userStore.removeUser(user);
-    userStore.fetchUsers();
+
+const remove = async (user) => {
+    await userStore.removeUser(user);
+    await userStore.fetchUsers();
     users.value = userStore.users;
 }
 

@@ -17,6 +17,7 @@ export const useUserStore = defineStore('user', {
             }
         },
 
+
         async removeUser(user) {
             try {
                 const userLink = baseUrl + "/" + user.id;

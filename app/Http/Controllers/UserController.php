@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::where('is_admin', '!=', 'admin')->get();
+        $user = User::where('role', '!=', 'admin')->get();
         return response()->json([
             'message' => 'get users',
             'status' => 'success',
