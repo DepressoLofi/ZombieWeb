@@ -20,14 +20,14 @@ class UsersTableSeeder extends Seeder
         $user->username = "Admin";
         $user->email = "adminz@gmail.com";
         $user->password = Hash::make('zombie');
-        $user->role = "admin";
+        $user->role = 1;
         $user->save();
 
         $user1 = new User;
         $user1->username = "User1";
         $user1->email = "userone@gmail.com";
         $user1->password = Hash::make('zombie');
-        $user1->role = "user";
+        $user1->role = 0;
         $user1->save();
 
 
@@ -35,7 +35,7 @@ class UsersTableSeeder extends Seeder
         $user2->username = "User2";
         $user2->email = "usertwo@gmail.com";
         $user2->password = Hash::make('zombie');
-        $user2->role = "user";
+        $user2->role = 0;
         $user2->save();
     }
 }

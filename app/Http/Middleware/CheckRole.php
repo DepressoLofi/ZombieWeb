@@ -17,9 +17,9 @@ class CheckRole
      */
     public function handle(Request $request, Closure $next, ...$roles)
     {
-        $user =JWTAuth::parseToken()->authenticate();
+        $user = JWTAuth::parseToken()->authenticate();
 
-        if($user && in_array($user->is_admin, $roles)) {
+        if ($user && in_array($user->role, $roles)) {
             return $next($request);
         }
 
